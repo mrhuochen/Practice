@@ -1,1 +1,18 @@
-Write your Answer here
+public class CodeWordChecker implements StringChecker
+{
+  private String keyword;
+  private int min;
+  private int max;
+  
+  public CodeWordChecker(String str)
+  {
+    keyword = str;
+  }
+   public CodeWordChecker(int i, int j, String str)
+   {
+     min = i;
+     max = j;
+     keyword = str;
+   }
+   
+}
