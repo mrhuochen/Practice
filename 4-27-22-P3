@@ -1,1 +1,18 @@
-Write your Answer here
+public class CodeWordChecker implements StringChecker {
+  private String notInclude;
+  private int minLength;
+  private int maxLength;
+  public CodeWordChecker(int min, int max, String n){
+    int minLength = min; 
+    int maxLength = max;
+    String notInclude = n;
+  }
+  public CodeWordChecker(String n){
+    int minLength = 6;
+    int maxLength = 20;
+    String notInclude = n;
+  }
+  public boolean isValid(String str){
+    return str.length()<min && str.length()>max+1 && str.indexOf(notInclude)==-1;
+  }
+  }
