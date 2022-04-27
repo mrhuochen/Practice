@@ -1,0 +1,21 @@
+public class CodeWordChecker implements StringChecker
+{
+public CodeWordChecker(int min, int max, String banned)
+{
+int minimum = min;
+int maximum = max;
+}
+public CodeWordChecker(String banned)
+{
+minimum = 6;
+maximum = 20;
+}
+public boolean isValid(String codeWord)
+{
+if codeWord.contains(banned)
+{
+return false;
+}
+return true;
+}
+}
