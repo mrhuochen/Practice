@@ -1,1 +1,28 @@
 Write your Answer here
+
+public class StringChecker{
+  
+  private int min;
+  private int max;
+  private String not;
+  
+  public StringChecker(int minimum, int maximum, String none){
+    min = minimum;
+    max = maximum;
+    not = none;
+  }
+  
+  public StringChecker(String none){
+    min = 6;
+    max = 20;
+    not = none;
+  }
+  
+  public boolean isValid(String check){
+    if(min <= check.length() && max => check.length() && check.indexOf(not) == -1){
+      return true;
+    }
+    return false;
+  }
+  
+}
