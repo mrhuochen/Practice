@@ -1,1 +1,30 @@
-Write your Answer here
+public class CodeWordChecker implements StringChecker {
+  private int minLen;
+  private int maxLen;
+  private String prohibited;
+  
+  public CodeWordChecker(String proh){
+    minLen = 6;
+    maxLen = 20;
+    prohibited = proh;
+  }
+  
+  public CodeWordChecker(int min, int max, String proh){
+    minLen = min;
+    maxLen = max;
+    prohibited = proh;
+  }
+  
+  public boolean isValid(String str){
+    int len = prohibited.length();
+    if (str.length() >= minLen && str.length() <= maxLen) {
+      for (int i = 0; i < str.length()-len; i++){
+        if (str.substring(i, len).equals(prohibited)) {
+          return false;
+        }
+      }
+    }
+    return false;
+  }
+
+}
