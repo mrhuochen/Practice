@@ -4,12 +4,20 @@ public class CodeWordChecker implements StringChecker
 	private int max;
 	private String banned;
 	
-	public CodeWordChecker(int min, int max, int banned)
+	public CodeWordChecker(int min, int max, String banned)
 	{
                 this.min = min;
                 this.max = max;
                 this.banned = banned;
         }
+	
+		public CodeWordChecker(String banned)
+	{
+                this.min = 6;
+                this.max = 20;
+                this.banned = banned;
+        }
+	
 	public boolean isValid(String str)
         {
                 return str.length() >= min && str.length() <= max && str.indexOf(banned) == -1
