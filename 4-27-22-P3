@@ -5,7 +5,7 @@ public interface StringChecker{
   boolean isValid(String str);
 }
 
-public class CodeWordChecker implement StringChecker{
+public class CodeWordChecker implements StringChecker{
   private int min;
   private int max;
   private String notOccur;
