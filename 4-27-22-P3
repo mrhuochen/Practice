@@ -1,1 +1,27 @@
-Write your Answer here
+public class CodeWordChecker implements StringChecker {
+    private int min = 6;
+    private int max = 20;
+    private String disallowed;
+
+    public CodeWordChecker(int min, int max, String disallowed) {
+        this.min = min;
+        this.max = max;
+        this.disallowed = disallowed;
+    }
+
+    public CodeWordChecker(String disallowed) {
+        this.disallowed = disallowed;
+    }
+
+    public boolean isValid(String word) {
+        if (word.length() < min || word.length() > max) {
+            return false;
+        }
+
+        if (word.contains(disallowed)) {
+            return false;
+        }
+
+        return true;
+    }
+}
