@@ -1,1 +1,31 @@
-Write your Answer here
+
+public class CodeWorkChecker implements StringChecker{
+	private int leftBound;
+	private int rightBound;
+	private String notAllowed;
+
+	public CodeWorkChecker(int lb, int rb, String na){
+		leftBound=lb;
+		rightBound=rb;
+		notAllowed=na;
+	}
+	public CodeWorkChecker(String na){
+		leftBound=6;
+		rightBound=20;
+		notAllowed=na;
+	}
+
+	public boolean isValid(String str){
+		if(str.length()>rightBound||str.length()<leftBound){
+			return false;
+		}
+		else{
+			for(int i=0;i<str.length();i++){
+				if(str.substring(i,i+1).equals(notAllowed)){
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+}
