@@ -1,1 +1,26 @@
 Write your Answer here
+public class CodeWordChecker implements StringChecker {
+  private int minLen=0;
+  private int maxLen=0;
+  private String str;
+  
+  public CodeWorkChecker(int x, int y, String s) {
+    minLen=x;
+    maxLen=y;
+    str=s;
+  }
+  
+  public CodeWorkChecker(String s) {
+    minLen=6;
+    maxLen=20;
+  }
+  
+  public boolean isValid(String s) {
+    if ((s.length()>maxLen)||(s.length()<minLen)) {
+      return false; }
+    else if (str.indexOf(s)==-1) {
+      return true;
+    else {
+      return false; }
+  }
+}
