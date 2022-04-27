@@ -1,1 +1,25 @@
-Write your Answer here
+public class CodeWordChecker implements StringChecker
+{
+ public int min;
+ public int max;
+ public String no;
+ 
+ public CodeWordChecker(int min, int max, String no)
+ {
+  this.min = min;
+  this.max = max;
+  this.no;
+ }
+ 
+ public CodeWordChecker(String no)
+ {
+   min = 6;
+   max = 20;
+   this.no = no;
+ }
+ 
+ public boolean isValid (String str)
+ {
+  return str.length() >= min && str.length() <= max && str.indexOf(no) != 1;
+ }
+}
