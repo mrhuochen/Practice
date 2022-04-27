@@ -3,10 +3,10 @@ public class CodeWordChecker implements StringChecker {
   private int maxLen;
   private String prohibited;
   
-  public CodeWordChecker(){
+  public CodeWordChecker(String proh){
     minLen = 6;
     maxLen = 20;
-    prohibited = "";
+    prohibited = proh;
   }
   
   public CodeWordChecker(int min, int max, String proh){
