@@ -1,1 +1,26 @@
 Write your Answer here
+
+public class CodeWordChecker implements StringChecker {
+
+    private int begin;
+    private int end;
+    private String badWord;
+
+    public CodeWordChecker(int begin, int end, String keyword) {
+        this.begin = begin;
+        this.end = end;
+        badWord = keyword;
+    }
+
+    public CodeWordChecker(String keyword) {
+        this.begin = 6;
+        this.end = 20;
+        badWord = keyword; 
+    }
+
+    public boolean isValid(String str) {
+        if(str.length() >= begin && str.length() <= end && str.contains(badWord) == false) return true;
+        return false;
+    }
+
+}
