@@ -1,1 +1,20 @@
-Write your Answer here
+public class CodeWordChecker implements StringChecker
+{
+  private int max;
+  private int min;
+  private String not;
+  
+  public CodeWordChecker(int maximum, int minimum, String x)
+  {
+    max = mamimum;
+    min = minimum;
+    not = x;
+  }
+  
+  public CodeWordChecker(String x)
+  {
+    max = 20;
+    min = 6;
+    not = x;
+  }
+}
