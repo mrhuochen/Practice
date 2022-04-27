@@ -1,1 +1,21 @@
-Write your Answer here
+public class CodeWordChecker implements StringChecker {
+  private int minWordLength;
+  private int maxWordLength;
+  private String thisWord;
+  
+  public CodeWordChecker(int min. int max, String reject) {
+    minWordLength = min;
+    maxWordLength = max;
+    thisWord = reject;
+  }
+  
+  public CodeWordChecker(String s) {
+    minWordLength = 6;
+    maxWordLength = 20;
+    thisWord = s;
+  }
+  
+  public boolean isValid(String str) {
+    return !(str.contains(thisWord));
+  }
+}
