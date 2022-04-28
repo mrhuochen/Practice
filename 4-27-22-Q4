@@ -1,1 +1,34 @@
+//William Mezitis
 
+public class ArrayChecker {
+    public static int[] getColumn(int[][] arr2D, int c){
+        int temp[] = new int[arr2D.length];
+        for (int i = 0; i < arr2D.length; i++){
+            temp[i] = arr2D[i][c];
+        }
+        return temp;
+    }
+
+    /*The first row has no duplicate values.
+      All values in the first row of the square appear in each row of the square.
+      All values in the first row of the square appear in each column of the square*/
+    
+    
+    public static boolean isLatin(int[][] square){
+        if (containsDuplicates(square[0])){
+            return false;
+        }
+
+        for (int i = 0; i < square[0].length; i++){
+            if (!hasAllValues(square[0], getColumn(square, i)){
+                return false;
+            }
+        for (int j = 0; j < squares.length; j++){
+            if (!hasAllValues(square[0], square[i]){
+                return false;
+            }
+        }
+        
+        return true;
+    }
+}
