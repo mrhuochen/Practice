@@ -1,1 +1,41 @@
-
+public class ArrayTester
+{
+  public static int[] getColumn (int[][] arr2D, int c)
+  {
+    int[] output = new int[arr2D.length];
+    
+    for (int a = 0; a < arr2D.length; a++)
+    {
+      output[a] = arr2D[a][c];  
+    }
+    
+    return output;
+  }
+  
+  public static boolean isLatin(int[][] square)
+  {
+    int[] row1 = new int[square[0].length]
+    
+    for (int a = 0; a < row1.length; a++)
+    {
+      row1[a] = square[0][a];
+    }
+    
+    if (containsDuplicates(row1))
+    return false;
+    
+    for (int b = 0; b < square.length; b++)
+    {
+      if (!hasAllValues(row1, square[b]))
+      return false;
+    }
+    
+    for (int c = 0; c < square.length; c++)
+    {
+      if (!hasAllValues(row1, getColumn(square, c)))
+      return false;
+    }
+    
+    return true;
+    }
+ }
