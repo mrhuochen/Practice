@@ -11,7 +11,7 @@ public static boolean isLatin(int[][] square){
     return false; 
   for(int i = 1; i<square.length;i++)
     {
-      if(!(hasAllValues(square[0],square[1]))){
+      if(!(hasAllValues(square[0],square[i]))){
         return false;
       }
     }
