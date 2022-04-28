@@ -1,1 +1,26 @@
+public static int[] getColumn(int[][] arr2D, int c){
+  int[] result = int[];
+  for(int i = 0; i < arr2D.length; i++){
+    result[i] = arr2D[i][c]; 
+  }
+  return result;
+}
 
+public static boolean isLatin(int[][] square){
+  if(square.containsDuplicates(square[r])){
+    return false;
+  }
+  for(int i = 0; i<square.length; i++){
+    }
+    int[] temp = square.getColumn(square, 0);
+    for(int c = 0; c<square.length; c++){
+      if(square.containsDuplicates(square[r])){
+        return false;
+      }
+      if(square.hasAllValues(c, i)){
+        return true;
+      }
+    }
+  }
+  return true;
+}
