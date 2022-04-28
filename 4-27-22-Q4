@@ -1,1 +1,61 @@
-
+public class ArrayTestr{
+	public static int[] getColumn(int[][] arr2D, int c){
+		int[] ans= new int[arr2D.length];
+		for(int i=0;i<ans.length;i++){
+			ans[i]=arr2D[i][c];
+		}
+		return ans;
+	}
+	public static boolean hasAllValues(int[] arr1, int[] arr2){
+		boolean[] isContained= new boolean[arr1.length];
+		for(int i=0;i<arr1.length;i++){
+			for(int j=0;j<arr1.length;j++){
+				if(arr2[i]==arr[j]){
+					isContained[j]=true;
+					break;
+				}
+			}
+		}
+		for(int i=0;i<isContained.legnth;i++){
+			if(!isContainded[i]){
+				return false;
+			}
+		}
+		return true;
+	}
+	public static boolean containsDuplicates(int[] arr){
+		ArrayList<Integer> checker= new ArrayList<Integer>();
+		for(int i=0;i<arr.length;i++){
+			if(checker.contains(arr[i])){
+				return true;
+			}
+			checker.add(arr[i]);
+		}
+		return false;
+	}
+	public static boolean isLatin(int[][] square){
+		int[] ans= new int[square[0].length];
+		for(int i=0;i<ans.length;i++){
+			ans[i]=square[0][i];
+		}
+		if(containsDuplicates(ans)){
+			return false;
+		}
+		for(int i=0;i<square.length;i++){
+			int[] col= getColumn(i);
+			if(!hasAllValues(ans,col)){
+				return false;
+			}
+		}
+		for(int i=0;i<square[0].length;i++){
+			int[] row= new int[square.length];
+			for(int j=0;j<square.length;j++){
+				row[j]=square[i][j];
+			}
+			if(!hasAllValues(ans,row)){
+				return false;
+			}
+		}
+		return true;
+	}
+}
