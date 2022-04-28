@@ -1,1 +1,30 @@
 Write your Answer here
+
+
+public interface StringChecker{
+  boolean isValid(String str);
+}
+
+public class CodeWordChecker implements StringChecker{
+  private int min;
+  private int max;
+  private String notOccur;
+  
+  public CodeWordChecker(String str){
+    min = 6;
+    max = 20;
+    notOccur = str;
+  }
+  public CodeWordChecker(int minimum, int maximum, String str){
+    min = minimum;
+    max = maximum;
+    notOccur = str;
+  }
+  
+  public boolean isValid(String str){
+    if(str.length() >= min && str.length() <= max && !str.contains(notOccr)){
+      return true;
+    }
+    return false;
+  }
+}
