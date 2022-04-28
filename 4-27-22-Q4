@@ -1,1 +1,22 @@
+private int[][] col;
 
+public int[] getColumn(int[][] array, int num)
+{
+  for(int c =0; c<array.length; x++)
+  {
+    col[x] = array[num][x]
+  }
+  return col;
+}
+
+public boolean isLatin(int[][] arr, int[] array, int num)
+{
+int value = 0;
+  for(int x =0; x<array.length; x++)
+  {
+    value =+ array[num];
+    if(value == value)
+    return true;
+  }
+  return false;
+}
