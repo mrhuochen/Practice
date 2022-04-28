@@ -1,1 +1,34 @@
+a)
+public static int[] getColumn(int[][] arr2D, int c) {
+  int[] returnArray = new int[arr2D.length];
+  for(int r = 0; r < arr2D.length; r++) {
+    returnArray[r] = arr2D[r][c];
+  }
+  
+  return returnArray;
+}
 
+b)
+public static boolean isLatin(int[][] square) {
+  if (containsDuplicates(square[0])) {
+    return false;
+  }
+  
+  for (int r = 1; r < square.length; r++) {
+    if (!hasAllValues(square[r], square[0]) {
+      return false;
+    }
+  }
+  
+  int[] temp = new int[square.length];
+  for (int c = 0; c < square.length; c++) {
+    for (int r = 0; r < square.length; r++) {
+      temp[r] = square[r][c];
+      if (!hasAllValues(temp, square[0])) {
+        return false;
+      }
+    }
+  }
+  
+  return true;
+}
