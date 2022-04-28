@@ -1,1 +1,19 @@
-Write your Answer here
+public class CodeWordChecker implements StringChecker {
+  private int minlength;
+  privtae int maxLength;
+  private String notCodeWord;
+  
+public CodeWordChecker(int min, int max, String symbol) {
+  minLength = min;
+  maxLength = max;
+  notCodeWord = symbol; }
+  
+public CodeWordChecker(String symbol);
+  minLength = 5;
+  maxLength = 8;
+  notCodeWord = symbol;}
+  
+public boolean isValid(String str){
+  return str.length()>=minLength && str.length()<=maxLength && str.indexOf(notCodeWord)== //IDK what to put//; 
+  
+  }}
