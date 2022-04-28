@@ -1,1 +1,32 @@
-Write your Answer here
+public CodeWordChecker implements StringChecker
+{
+  private int max;
+  private int min;
+  private String word;
+  
+  public CodeWorkChecker(int minLength, int maxLength, String check)
+  {
+    maxLength = max;
+    minLength = min;
+    check = word;
+  }
+  
+  public CodeWorkChecker(String check)
+  {
+    min = 6;
+    max = 20;
+    word = check;
+  }
+  
+  public boolean isValid(String test)
+  {
+    if(word.length-1 >= max && word.length-1<= min)
+    {
+      if(word.indexOf(test)<0)
+      {
+        return true;
+      }
+    }
+  }
+  return false;
+}
