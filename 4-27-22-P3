@@ -1,1 +1,36 @@
 Write your Answer here
+public class CodeWordChecker extends StringChecker
+{
+  private int min;
+  private int max;
+  private String str;
+  
+  public CodeWordChecker (String s)
+  {
+    min = 6;
+    max = 20;
+    str = s;
+    }
+    
+  public CodeWordChecker (int a, int b, String s)
+  {
+    min = a;
+    max = b;
+    str = s;
+  }
+  
+  public boolean isValid (String test)
+  {
+    if (test.length() < min || test.length() > max)
+    {
+      return false;
+    }
+    
+    if (test.indexOf(str) != -1)
+    {
+      return false;
+    }
+    
+    return true;
+    }
+}
